@@ -780,7 +780,8 @@ func handlePollServiceInstance(w http.ResponseWriter, r *http.Request, params ht
 	}
 
 	response := &api.PollServiceInstanceResponse{
-		State: api.PollStateSucceeded,
+		State:       api.PollStateSucceeded,
+		Description: "Success",
 	}
 	JSONResponse(w, http.StatusOK, response)
 }
